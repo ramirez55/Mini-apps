@@ -1,0 +1,117 @@
+body {  
+    margin: 0;  
+    font-family: Arial, sans-serif;  
+}  
+
+
+.navbar {  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center;  
+    background-color: #333;  
+    padding: 10px 20px;  
+    position: fixed;  
+    top: 0;  
+    left: 0;  
+    right: 0;  
+    z-index: 1000;  
+}  
+
+.navbar h1 {  
+    color: white;  
+    margin: 0;  
+    flex-grow: 1; /* Asegura que el título ocupe espacio y empuje los otros elementos */  
+}  
+
+.nav-buttons {  
+    display: flex;  
+    align-items: center;  
+}  
+
+.search-button{
+    background-color: transparent;
+    padding: 10px 15px;
+    border: 0px;
+}
+
+.nav-buttons a, .search-button, .search-button-mobile {  
+    background-color: transparent;
+    color: white;  
+    text-decoration: none;  
+    padding: 10px 15px;  
+    margin: 0 5px;  
+    border-radius: 4px;  
+    transition: background-color 0.3s;  
+    cursor: pointer;  
+}  
+
+.nav-buttons a:hover, .search-button:hover, .search-button-mobile:hover {  
+    background-color: #575757;  
+}  
+
+.search-container {  
+    display: none; /* Inicialmente oculto */  
+    align-items: center;  
+}  
+
+.search-container input[type="text"] {  
+    background-color: transparent;
+    color: white;
+    padding: 8px;  
+    border: none;  
+    border-bottom: 2px solid white;  
+}  
+
+.search-container button {  
+    padding: 8px 12px;  
+    border: none;  
+    background-color: transparent;  
+    cursor: pointer;  
+    border-radius: 4px;  
+    margin-left: 5px;  
+    transition: background-color 0.3s;  
+}  
+
+.search-container button:hover {  
+    background-color: #ddd;  
+}  
+
+/* Estilos Responsivos */  
+@media screen and (max-width: 768px) {  
+    .nav-buttons {  
+        display: none; /* Oculta los botones en pantallas pequeñas */  
+    }  
+    .hamburger {  
+        display: block; /* Muestra el icono de hamburguesa solo en móviles */  
+        cursor: pointer;  
+        color: white;  
+        font-size: 24px;  
+    }  
+    .dropdown {  
+        display: none;  
+        position: absolute;  
+        background-color: #333;  
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);  
+        z-index: 999;  
+        width: 100%; /* Ocupar el ancho total de la pantalla */  
+    }  
+    .dropdown a, .dropdown .search-button-mobile {  
+        display: block;  
+        padding: 10px;  
+        border: none;  
+        color: white;  
+        text-align: left;  
+    }  
+    .dropdown a:hover, .dropdown .search-button-mobile:hover {  
+        background-color: #575757;  
+    }  
+}  
+
+/* Muestra el menú desplegable */  
+.show {  
+    display: block;  
+}  
+
+.content {  
+    padding: 60px 20px; /* Espacio para la barra fija */  
+}  
